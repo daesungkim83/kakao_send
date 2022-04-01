@@ -6,6 +6,7 @@ import pyperclip
 from bs4 import BeautifulSoup
 import requests
 import re
+from random import *
 
 def create_soup(url):
     res = requests.get(url)
@@ -73,32 +74,63 @@ if w.isActive == False: # 현재 활성화가 되지 않았다면
 
 pyautogui.sleep(3)
 
-ds_kaka = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\ds.png", confidence=0.5)
-pyautogui.doubleClick(ds_kaka)
+# ds_kaka = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\ds.png", confidence=0.5)
+# pyautogui.doubleClick(ds_kaka)
 
-time.sleep(3)
+# time.sleep(3)
 
-with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", encoding="utf8") as fp:
-    def my_write(text):
-        pyperclip.copy(text)
-        pyautogui.hotkey("ctrl", "v")
-        pyautogui.sleep(2)
-        pyautogui.keyDown('enter')
-        pyautogui.sleep(2)
-        pyautogui.keyDown('esc')
-        pyautogui.sleep(2)
-        pyautogui.keyDown('down')
-    my_write(fp.read())
+# with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", encoding="utf8") as fp:
+#     def my_write(text):
+#         pyperclip.copy(text)
+#         pyautogui.hotkey("ctrl", "v")
+#         pyautogui.sleep(2)
+#         pyautogui.keyDown('enter')
+#         pyautogui.sleep(2)
+#         pyautogui.keyDown('esc')
+#         pyautogui.sleep(2)
+#         pyautogui.keyDown('down')
+#     my_write(fp.read())
     
 
-time.sleep(3)
-
-
+# time.sleep(3)
 
 na_kaka = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\nana.png", confidence=0.5)
 pyautogui.doubleClick(na_kaka)
 
 time.sleep(3)
+
+file = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\file.png", confidence=0.7)
+pyautogui.click(file)
+
+time.sleep(2)
+
+camera = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\camera.png", confidence=0.7)
+pyautogui.click(camera)
+
+time.sleep(2)
+
+folder = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\folder-f.png", confidence=0.7)
+pyautogui.doubleClick(folder)
+
+
+pictures = range(1, 15)
+pictures = list(pictures)
+shuffle(pictures)
+select = sample(pictures, 1)
+
+pyautogui.write("{}.jpg".format(pictures[0]))
+
+time.sleep(2)
+
+pyautogui.hotkey("alt", "o")
+
+time.sleep(2)
+
+# pyautogui.keyDown('esc')
+
+# time.sleep(2)
+
+
 
 with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", encoding="utf8") as fp:
     def my_write(text):
@@ -134,10 +166,40 @@ time.sleep(3)
 # trans = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\trans.png", confidence=0.7)
 # pyautogui.click(trans)
 
+
 friend_kaka = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\friend.png", confidence=0.5)
 pyautogui.doubleClick(friend_kaka)
 
 time.sleep(3)
+
+file = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\file.png", confidence=0.7)
+pyautogui.click(file)
+
+time.sleep(2)
+
+camera = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\camera.png", confidence=0.7)
+pyautogui.click(camera)
+
+time.sleep(2)
+
+folder_weather = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\folder_weather.png", confidence=0.7)
+pyautogui.doubleClick(folder_weather)
+
+
+pictures = range(1, 16)
+pictures = list(pictures)
+shuffle(pictures)
+select = sample(pictures, 1)
+
+pyautogui.write("{}.jpg".format(pictures[0]))
+
+time.sleep(2)
+
+pyautogui.hotkey("alt", "o")
+
+time.sleep(2)
+
+
 
 with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", encoding="utf8") as fp:
     def my_write(text):
@@ -156,3 +218,6 @@ time.sleep(3)
 
 # trans = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\trans.png", confidence=0.7)
 # pyautogui.click(trans)
+
+
+
