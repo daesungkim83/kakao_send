@@ -73,6 +73,28 @@ if w.isActive == False: # 현재 활성화가 되지 않았다면
 
 pyautogui.sleep(3)
 
+ds_kaka = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\ds.png", confidence=0.5)
+pyautogui.doubleClick(ds_kaka)
+
+time.sleep(3)
+
+with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", encoding="utf8") as fp:
+    def my_write(text):
+        pyperclip.copy(text)
+        pyautogui.hotkey("ctrl", "v")
+        pyautogui.sleep(2)
+        pyautogui.keyDown('enter')
+        pyautogui.sleep(2)
+        pyautogui.keyDown('esc')
+        pyautogui.sleep(2)
+        pyautogui.keyDown('down')
+    my_write(fp.read())
+    
+
+time.sleep(3)
+
+
+
 na_kaka = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\nana.png", confidence=0.5)
 pyautogui.doubleClick(na_kaka)
 
@@ -82,15 +104,14 @@ with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", enc
     def my_write(text):
         pyperclip.copy(text)
         pyautogui.hotkey("ctrl", "v")
+        pyautogui.sleep(2)
         pyautogui.keyDown('enter')
+        pyautogui.sleep(2)
         pyautogui.keyDown('esc')
+        pyautogui.sleep(2)
         pyautogui.keyDown('down')
     my_write(fp.read())
     
-# time.sleep(3)
-
-# trans = pyautogui.locateOnScreen(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\trans.png", confidence=0.7)
-# pyautogui.click(trans)
 
 time.sleep(3)
 
@@ -122,8 +143,11 @@ with open(r"C:\Users\Kim Dae Sung\Desktop\PythonWorkspace\weather.txt", "r", enc
     def my_write(text):
         pyperclip.copy(text)
         pyautogui.hotkey("ctrl", "v")
+        pyautogui.sleep(2)
         pyautogui.keyDown('enter')
+        pyautogui.sleep(2)
         pyautogui.keyDown('esc')
+        pyautogui.sleep(2)
         pyautogui.keyDown('down')
 
     my_write(fp.read())
